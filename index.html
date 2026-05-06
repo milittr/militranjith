@@ -9,21 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <style>
-    /* Setting base to 20px (approx 0.65x of your previous 30px version) */
-    html {
-      font-size: 20px;
-    }
-
+    html { font-size: 16px; }
     body { 
       font-family: 'Crimson Pro', serif; 
       background-color: #f8f8f8; 
       font-weight: 400; 
     }
     
-    h1, h2, .semi-bold {
-      font-weight: 600;
-    }
-
+    h1, h2, .semi-bold { font-weight: 600; }
     .diagram-line { border-top: 1px dashed #bbb; }
 
     .fill-box {
@@ -31,6 +24,16 @@
       height: 100%;
       object-fit: cover; 
       display: block;
+    }
+
+    /* Small body text: 12px (0.75rem) */
+    .shrunken-content {
+      font-size: 0.75rem; 
+    }
+
+    /* Heading: 24px (1.5rem), exactly 2x the shrunken body text */
+    .shrunken-heading {
+      font-size: 1.5rem;
     }
   </style>
 </head>
@@ -47,19 +50,19 @@
   </nav>
 </header>
 
-<div class="h-20"></div>
+<div class="h-16"></div>
 
-<section class="max-w-4xl mx-auto p-6 mt-6">
-  <h2 class="text-2xl mb-4">About</h2>
-  <div class="diagram-line mb-8"></div>
+<section class="max-w-2xl mx-auto p-6 mt-10">
+  <h2 class="shrunken-heading mb-2">About</h2>
+  <div class="diagram-line mb-6"></div>
   
-  <div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-6">
     
     <div class="w-full aspect-[3/1] overflow-hidden">
-      <img src="about-me.jpg" alt="Milit Ranjith" class="fill-box border border-gray-300 shadow-md">
+      <img src="about-me.jpg" alt="Milit Ranjith" class="fill-box border border-gray-300 shadow-sm">
     </div>
     
-    <div class="text-lg leading-relaxed space-y-6">
+    <div class="shrunken-content leading-relaxed space-y-4 text-gray-700">
       <p>
         I am a mechanical engineer with experience spanning aerospace, assistive technology, and robotics.
         I graduated with an MEng from UC Berkeley and a BEng from the University of Manchester.
