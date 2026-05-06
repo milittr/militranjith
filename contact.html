@@ -4,47 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Milit Ranjith</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Libre Baskerville', serif; background-color: #f8f8f8; }
+    html { font-size: 16px; }
+
+    body { 
+      font-family: 'Crimson Pro', serif; 
+      background-color: #f8f8f8; 
+      font-weight: 400; 
+    }
+    
     .diagram-line { border-top: 1px dashed #bbb; }
+
+    .shrunken-content {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #374151;
+    }
+
+    .shrunken-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .nav-name {
+      font-size: 1.4rem; 
+      font-weight: 600;
+    }
+
+    .nav-link {
+      font-size: 1rem; 
+    }
+
+    /* Scaling for larger screens */
+    @media (min-width: 768px) {
+      .shrunken-heading { font-size: 2.5rem; }
+      .shrunken-content { font-size: 1.3rem; }
+      .nav-name { font-size: 1.6rem; }
+      .nav-link { font-size: 1.1rem; }
+    }
   </style>
 </head>
+
 <body class="text-gray-800">
 
 <header class="fixed top-0 w-full bg-white shadow-sm z-50">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-lg font-semibold">Milit Ranjith</h1>
-    <div class="space-x-6 text-sm">
+  <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
+    <h1 class="nav-name">Milit Ranjith</h1>
+    <div class="space-x-6 md:space-x-8 nav-link">
       <a href="index.html" class="hover:underline">About</a>
       <a href="work.html" class="hover:underline">Work</a>
-      <a href="contact.html" class="font-bold border-b-2 border-black">Contact</a>
+      <a href="contact.html" class="font-semibold border-b-2 border-black">Contact</a>
     </div>
   </nav>
 </header>
 
-<div class="h-16"></div>
+<div class="h-24"></div>
 
-<section class="max-w-4xl mx-auto p-6 mt-10">
-  <h2 class="text-2xl mb-4">Contact</h2>
-  <div class="diagram-line mb-8"></div>
-  
-  <p class="mb-8 text-sm">I'm always open to discussing new projects or design opportunities.</p>
+<section class="max-w-5xl mx-auto px-6 md:px-12 mt-10">
 
-  <div class="space-y-6">
-    <a href="mailto:militranjith2004@gmail.com" class="flex items-center gap-4 hover:text-blue-600 transition-colors">
-      <i data-lucide="mail"></i>
-      <span>militranjith2004@gmail.com</span>
-    </a>
-    <a href="https://linkedin.com" target="_blank" class="flex items-center gap-4 hover:text-blue-600 transition-colors">
-      <i data-lucide="linkedin"></i>
-      <span>LinkedIn Profile</span>
-    </a>
+  <div class="max-w-5xl">
+    <h2 class="shrunken-heading mb-4">Contact</h2>
+    <div class="diagram-line mb-10"></div>
+  </div>
+
+  <div class="flex flex-col gap-12">
+    
+    <div class="shrunken-content space-y-6">
+      <p>
+        I'm always open to discussing new projects or design opportunities. 
+        However, as a lifelong Real Madrid fan, please refer to the schedule below, 
+        as I may be slow to respond while watching my team go trophyless for the 3rd season in a row.
+      </p>
+
+      <div class="space-y-4 pt-4">
+        <a href="mailto:militranjith2004@gmail.com" class="flex items-center gap-4 hover:text-blue-600 transition-colors">
+          <i data-lucide="mail"></i>
+          <span>militranjith2004@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/milittr04/" target="_blank" class="flex items-center gap-4 hover:text-blue-600 transition-colors">
+          <i data-lucide="linkedin"></i>
+          <span>LinkedIn Profile</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">Real Madrid Schedule</h3>
+      <div class="border border-gray-300 shadow-sm overflow-hidden rounded-md bg-white">
+        <iframe 
+          src="https://calendar.google.com/calendar/embed?src=vbgut32b56uoqg1glv7gbent7nq2t92v%40import.calendar.google.com&ctz=America%2FLos_Angeles" 
+          style="border-width:0" 
+          width="100%" 
+          height="400" 
+          frameborder="0" 
+          scrolling="no">
+        </iframe>
+      </div>
+      <p class="text-xs text-gray-400 mt-2 italic text-right">*Matches automatically update and expire.</p>
+    </div>
+
   </div>
 </section>
 
-<script>lucide.createIcons();</script>
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 </html>
