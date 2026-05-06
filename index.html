@@ -25,24 +25,27 @@
       display: block;
     }
 
-    /* Small body text: 12px (0.75rem) */
+    /* Updated to match the "Large & Readable" look in your screenshot */
     .shrunken-content {
-      font-size: 0.75rem; 
+      font-size: 1.15rem; /* Approx 18.4px */
+      line-height: 1.6;
+      color: #374151; /* text-gray-700 equivalent */
     }
 
-    /* Heading: Increased to 2.25rem (1.5x of previous 1.5rem) and Bold */
+    /* Content Heading: Bold and Large as requested */
     .shrunken-heading {
       font-size: 2.25rem;
       font-weight: 700;
+      color: #1f2937; /* text-gray-800 equivalent */
     }
 
-    /* Nav Bar Enlargement (1.5x) */
+    /* Nav Bar: 1.5x larger than original */
     .nav-name {
-      font-size: 1.6rem; /* 1.5x larger than text-lg */
+      font-size: 1.6rem; 
       font-weight: 600;
     }
     .nav-link {
-      font-size: 1.15rem; /* 1.5x larger than text-sm */
+      font-size: 1.15rem; 
     }
   </style>
 </head>
@@ -61,17 +64,17 @@
 
 <div class="h-24"></div>
 
-<section class="max-w-2xl mx-auto p-6 mt-10">
-  <h2 class="shrunken-heading mb-2">About</h2>
-  <div class="diagram-line mb-6"></div>
+<section class="max-w-4xl mx-auto p-8 mt-10">
+  <h2 class="shrunken-heading mb-4">About</h2>
+  <div class="diagram-line mb-10"></div>
   
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-10">
     
     <div class="w-full aspect-[3/1] overflow-hidden">
-      <img src="about-me.jpg" alt="Milit Ranjith" class="fill-box border border-gray-300 shadow-sm">
+      <img src="about-me.jpg" alt="Rube Goldberg" class="fill-box border border-gray-300 shadow-sm">
     </div>
     
-    <div class="shrunken-content leading-relaxed space-y-4 text-gray-700">
+    <div class="shrunken-content space-y-8">
       <p>
         I am a mechanical engineer with experience spanning aerospace, assistive technology, and robotics.
         I graduated with an MEng from UC Berkeley and a BEng from the University of Manchester.
