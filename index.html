@@ -10,6 +10,7 @@
 
   <style>
     html { font-size: 16px; }
+
     body { 
       font-family: 'Crimson Pro', serif; 
       background-color: #f8f8f8; 
@@ -25,36 +26,43 @@
       display: block;
     }
 
-    /* Updated to match the "Large & Readable" look in your screenshot */
     .shrunken-content {
-      font-size: 1.15rem; /* Approx 18.4px */
-      line-height: 1.6;
-      color: #374151; /* text-gray-700 equivalent */
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #374151;
     }
 
-    /* Content Heading: Bold and Large as requested */
     .shrunken-heading {
-      font-size: 2.25rem;
+      font-size: 2rem;
       font-weight: 700;
-      color: #1f2937; /* text-gray-800 equivalent */
+      color: #1f2937;
     }
 
-    /* Nav Bar: 1.5x larger than original */
     .nav-name {
-      font-size: 1.6rem; 
+      font-size: 1.4rem; 
       font-weight: 600;
     }
+
     .nav-link {
-      font-size: 1.15rem; 
+      font-size: 1rem; 
+    }
+
+    /* Slight scaling on larger screens */
+    @media (min-width: 768px) {
+      .shrunken-heading { font-size: 2.5rem; }
+      .shrunken-content { font-size: 1.15rem; }
+      .nav-name { font-size: 1.6rem; }
+      .nav-link { font-size: 1.1rem; }
     }
   </style>
 </head>
+
 <body class="text-gray-800">
 
 <header class="fixed top-0 w-full bg-white shadow-sm z-50">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center p-6">
+  <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
     <h1 class="nav-name">Milit Ranjith</h1>
-    <div class="space-x-8 nav-link">
+    <div class="space-x-6 md:space-x-8 nav-link">
       <a href="index.html" class="font-semibold border-b-2 border-black">About</a>
       <a href="work.html" class="hover:underline">Work</a>
       <a href="contact.html" class="hover:underline">Contact</a>
@@ -64,17 +72,24 @@
 
 <div class="h-24"></div>
 
-<section class="max-w-4xl mx-auto p-8 mt-10">
-  <h2 class="shrunken-heading mb-4">About</h2>
-  <div class="diagram-line mb-10"></div>
-  
+<section class="max-w-7xl mx-auto px-6 md:px-12 mt-10">
+
+  <!-- Heading -->
+  <div class="max-w-3xl">
+    <h2 class="shrunken-heading mb-4">About</h2>
+    <div class="diagram-line mb-10"></div>
+  </div>
+
+  <!-- Content -->
   <div class="flex flex-col gap-10">
-    
+
+    <!-- Image (full width feel) -->
     <div class="w-full aspect-[3/1] overflow-hidden">
       <img src="about-me.jpg" alt="Rube Goldberg" class="fill-box border border-gray-300 shadow-sm">
     </div>
-    
-    <div class="shrunken-content space-y-8">
+
+    <!-- Text (constrained for readability) -->
+    <div class="max-w-3xl shrunken-content space-y-6">
       <p>
         I am a mechanical engineer with experience spanning aerospace, assistive technology, and robotics.
         I graduated with an MEng from UC Berkeley and a BEng from the University of Manchester.
@@ -84,6 +99,7 @@
         before letting physics and economics slow me down.
       </p>
     </div>
+
   </div>
 </section>
 
