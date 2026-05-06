@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Books | Milit Ranjith</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    html { font-size: 16px; }
+    body { 
+      font-family: 'Crimson Pro', serif; 
+      background-color: #f8f8f8; 
+      font-weight: 400; 
+    }
+    
+    .diagram-line { border-top: 1px dashed #bbb; }
+
+    .shrunken-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .nav-name { font-size: 1.4rem; font-weight: 600; }
+    .nav-link { font-size: 1rem; }
+
+    #bookModal.active { display: flex; }
+
+    @media (min-width: 768px) {
+      .shrunken-heading { font-size: 2.5rem; }
+      .nav-name { font-size: 1.6rem; }
+      .nav-link { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+<header class="fixed top-0 w-full bg-white shadow-sm z-50">
+  <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
+    <h1 class="nav-name">Milit Ranjith</h1>
+    <div class="space-x-6 md:space-x-8 nav-link">
+      <a href="index.html" class="hover:underline">About</a>
+      <a href="work.html" class="hover:underline">Work</a>
+      <a href="books.html" class="font-semibold border-b-2 border-black">Books</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="h-24"></div>
+
+<section class="max-w-5xl mx-auto px-6 md:px-12 mt-10">
+  <div class="max-w-5xl">
+    <h2 class="shrunken-heading mb-4">Book Recommendations</h2>
+    <div class="diagram-line mb-12"></div>
+  </div>
+
+  <div id="bookGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+    
+    <div class="group cursor-pointer" onclick="openBook(1)">
+      <div class="aspect-[2/3] bg-gray-200 mb-4 overflow-hidden border border-gray-300 shadow-md group-hover:shadow-xl transition-shadow">
+        <img src="the-perpetual-motion-machine.png" alt="The Perpetual Motion Machine" class="w-full h-full object-cover">
+      </div>
+      <h3 class="text-lg font-bold leading-tight">The Perpetual Motion Machine</h3>
+      <p class="text-gray-600 italic text-sm">Paul Scheerbart</p>
+    </div>
+
+    <div class="group cursor-pointer" onclick="openBook(2)">
+      <div class="aspect-[2/3] bg-gray-200 mb-4 overflow-hidden border border-gray-300 shadow-md group-hover:shadow-xl transition-shadow">
+        <img src="around-the-world-in-80-days.png" alt="Around the World in 80 Days" class="w-full h-full object-cover">
+      </div>
+      <h3 class="text-lg font-bold leading-tight">Around the World in 80 Days</h3>
+      <p class="text-gray-600 italic text-sm">Jules Verne</p>
+    </div>
+
+  </div>
+</section>
+
+<div id="bookModal" class="fixed inset-0 bg-black/80 hidden z-[100] p-6 overflow-y-auto items-center justify-center" onclick="closeModal()">
+  <div class="bg-white max-w-2xl w-full p-8 md:p-12 relative" onclick="event.stopPropagation()">
+    <button class="absolute top-4 right-6 text-3xl font-light hover:text-gray-500" onclick="closeModal()">&times;</button>
+    <div id="modalContent">
+      </div>
+  </div>
+</div>
+
+<script>
+  const books = {
+    1: {
+      title: "The Perpetual Motion Machine: The Story of an Invention",
+      author: "Paul Scheerbart",
+      media: '<div class="w-48 aspect-[2/3] mx-auto bg-gray-100 mb-8 shadow-lg border overflow-hidden"><img src="perpetual-motion-cover.jpg" class="w-full h-full object-cover"></div>',
+      desc: `
+        <p class="mb-6">
+          If it weren't for the fundamental laws of thermodynamics, perpetual motion machines would be ubiquitous. Written in 1910, Scheerbart documents his two-and-a-half-year quest to invent one from his laundry-room-cum-laboratory, with unreasonable optimism and uncontrollable imagination.
+        </p>
+        <p>
+          He hired plumbers and mechanics, spun out visions of the futures his invention would enable, and failed spectacularly, all while remaining completely convinced he was on the verge of something.
+        </p>
+      `
+    },
+    2: {
+      title: "Around the World in 80 Days",
+      author: "Jules Verne",
+      media: '<div class="w-48 aspect-[2/3] mx-auto bg-gray-100 mb-8 shadow-lg border overflow-hidden"><img src="around-the-world-cover.jpg" class="w-full h-full object-cover"></div>',
+      desc: `
+        <p class="mb-6">
+          Jules Verne has quickly become one of my favourite engineers. While pedantic people may point out he never held an engineering degree, in 1872 he still dreamed up a wind-powered sledge tearing across the American plains, a sail-rigged steamship crossing the Pacific, and a hot air balloon drifting over the Alps.
+        </p>
+        <p>
+          He managed to travel the world without ever leaving his seat.
+        </p>
+      `
+    }
+  };
+
+  function openBook(id) {
+    const modal = document.getElementById('bookModal');
+    const content = document.getElementById('modalContent');
+    const data = books[id];
+    
+    content.innerHTML = `
+      <div class="text-center">
+        ${data.media}
+        <h2 class="text-2xl md:text-3xl font-bold mb-1">${data.title}</h2>
+        <p class="text-gray-500 italic mb-8 text-lg">${data.author}</p>
+      </div>
+      <div class="text-[1.15rem] md:text-[1.25rem] leading-relaxed text-gray-700 border-t pt-8">
+        ${data.desc}
+      </div>
+    `;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('bookModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+</script>
+
+</body>
+</html>
