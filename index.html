@@ -6,7 +6,7 @@
   <title>About | Milit Ranjith</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
     html { font-size: 16px; }
@@ -16,7 +16,6 @@
       font-weight: 400; 
     }
     
-    h1, h2, .semi-bold { font-weight: 600; }
     .diagram-line { border-top: 1px dashed #bbb; }
 
     .fill-box {
@@ -31,18 +30,28 @@
       font-size: 0.75rem; 
     }
 
-    /* Heading: 24px (1.5rem), exactly 2x the shrunken body text */
+    /* Heading: Increased to 2.25rem (1.5x of previous 1.5rem) and Bold */
     .shrunken-heading {
-      font-size: 1.5rem;
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+
+    /* Nav Bar Enlargement (1.5x) */
+    .nav-name {
+      font-size: 1.6rem; /* 1.5x larger than text-lg */
+      font-weight: 600;
+    }
+    .nav-link {
+      font-size: 1.15rem; /* 1.5x larger than text-sm */
     }
   </style>
 </head>
 <body class="text-gray-800">
 
 <header class="fixed top-0 w-full bg-white shadow-sm z-50">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-lg">Milit Ranjith</h1>
-    <div class="space-x-6 text-sm">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center p-6">
+    <h1 class="nav-name">Milit Ranjith</h1>
+    <div class="space-x-8 nav-link">
       <a href="index.html" class="font-semibold border-b-2 border-black">About</a>
       <a href="work.html" class="hover:underline">Work</a>
       <a href="contact.html" class="hover:underline">Contact</a>
@@ -50,7 +59,7 @@
   </nav>
 </header>
 
-<div class="h-16"></div>
+<div class="h-24"></div>
 
 <section class="max-w-2xl mx-auto p-6 mt-10">
   <h2 class="shrunken-heading mb-2">About</h2>
