@@ -4,73 +4,213 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work | Milit Ranjith</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Libre Baskerville', serif; background-color: #f8f8f8; }
+    html { font-size: 16px; }
+    body { 
+      font-family: 'Crimson Pro', serif; 
+      background-color: #f8f8f8; 
+      font-weight: 400; 
+    }
+    
     .diagram-line { border-top: 1px dashed #bbb; }
-    .active-filter { background-color: #e5e7eb; }
+
+    .shrunken-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .nav-name { font-size: 1.4rem; font-weight: 600; }
+    .nav-link { font-size: 1rem; }
+
+    /* Filter Button Styles */
+    .filter-btn {
+      transition: all 0.2s ease;
+      border-color: #d1d5db;
+    }
+    .filter-btn.active-filter {
+      background-color: #1f2937;
+      color: white;
+      border-color: #1f2937;
+    }
+
+    /* Modal Styles */
+    #projectModal.active { display: flex; }
+
+    @media (min-width: 768px) {
+      .shrunken-heading { font-size: 2.5rem; }
+      .nav-name { font-size: 1.6rem; }
+      .nav-link { font-size: 1.1rem; }
+    }
   </style>
 </head>
+
 <body class="text-gray-800">
 
 <header class="fixed top-0 w-full bg-white shadow-sm z-50">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-lg font-semibold">Milit Ranjith</h1>
-    <div class="space-x-6 text-sm">
+  <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
+    <h1 class="nav-name">Milit Ranjith</h1>
+    <div class="space-x-6 md:space-x-8 nav-link">
       <a href="index.html" class="hover:underline">About</a>
-      <a href="work.html" class="font-bold border-b-2 border-black">Work</a>
+      <a href="work.html" class="font-semibold border-b-2 border-black">Work</a>
       <a href="contact.html" class="hover:underline">Contact</a>
     </div>
   </nav>
 </header>
 
-<div class="h-16"></div>
+<div class="h-24"></div>
 
-<section class="max-w-6xl mx-auto p-6 mt-10">
-  <h2 class="text-2xl mb-4">Work</h2>
-  <div class="diagram-line mb-6"></div>
-
-  <div class="mb-6 flex flex-wrap gap-2 text-sm">
-    <button class="filter-btn active-filter px-3 py-1 border" data-filter="all">All</button>
-    <button class="filter-btn px-3 py-1 border" data-filter="human">Human-Centered</button>
-    <button class="filter-btn px-3 py-1 border" data-filter="robotics">Robotics</button>
-    <button class="filter-btn px-3 py-1 border" data-filter="mechanical">Mechanical</button>
+<section class="max-w-5xl mx-auto px-6 md:px-12 mt-10">
+  <div class="max-w-5xl">
+    <h2 class="shrunken-heading mb-4">Selected Work</h2>
+    <div class="diagram-line mb-8"></div>
   </div>
 
-  <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="project-card border p-4 cursor-pointer bg-white" data-category="human" onclick="openProject('vima')">
-      <div class="h-40 bg-gray-100 mb-4 flex items-center justify-center text-xs text-gray-400 border">Project Image</div>
-      <h3 class="text-sm">VIMA – Assistive Navigation Device</h3>
+  <div class="mb-10 flex flex-wrap gap-3">
+    <button class="filter-btn active-filter px-4 py-1 border rounded-full text-sm" data-filter="all">All Projects</button>
+    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="human">Human-Centered</button>
+    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="robotics">Robotics</button>
+    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="mechanical">Mechanical</button>
+  </div>
+
+  <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(1)">
+      <div class="aspect-video bg-gray-200 mb-3 overflow-hidden border border-gray-300">
+        <img src="p1-thumb.jpg" alt="VIMA" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+      </div>
+      <h3 class="text-xl font-bold">VIMA Navigation</h3>
+      <p class="text-gray-600 italic">Human-Centered</p>
     </div>
+
+    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(2)">
+      <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
+      <h3 class="text-xl font-bold">Exoskeleton Grip</h3>
+      <p class="text-gray-600 italic">Human-Centered</p>
     </div>
+
+    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(5)">
+      <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
+      <h3 class="text-xl font-bold">Swarm Drone Array</h3>
+      <p class="text-gray-600 italic">Robotics</p>
+    </div>
+
+    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(6)">
+      <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
+      <h3 class="text-xl font-bold">Autonomous Rover</h3>
+      <p class="text-gray-600 italic">Robotics</p>
+    </div>
+
+    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(9)">
+      <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
+      <h3 class="text-xl font-bold">Aerospace Linkage</h3>
+      <p class="text-gray-600 italic">Mechanical</p>
+    </div>
+
+    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(3)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Prosthetic Interface</h3><p class="text-gray-600 italic">Human-Centered</p></div>
+    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(4)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Haptic Feedback Glove</h3><p class="text-gray-600 italic">Human-Centered</p></div>
+    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(7)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Soft Robotics Gripper</h3><p class="text-gray-600 italic">Robotics</p></div>
+    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(8)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Bipedal Balancer</h3><p class="text-gray-600 italic">Robotics</p></div>
+    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(10)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Turbine Housing</h3><p class="text-gray-600 italic">Mechanical</p></div>
+    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(11)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Suspension Geometry</h3><p class="text-gray-600 italic">Mechanical</p></div>
+    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(12)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Cryogenic Valve</h3><p class="text-gray-600 italic">Mechanical</p></div>
+  </div>
 </section>
 
-<section class="max-w-6xl mx-auto p-6 mt-20 mb-20">
-  <h2 class="text-2xl mb-4">Skills</h2>
-  <div class="diagram-line mb-6"></div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+<section class="max-w-5xl mx-auto px-6 md:px-12 mt-24 mb-24">
+  <h2 class="text-3xl font-bold mb-4">Skills</h2>
+  <div class="diagram-line mb-8"></div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-lg">
     <div>
-      <h3 class="mb-2 font-semibold underline">Hardware</h3>
-      <p>FEA, Sensors, Mechatronics</p>
+      <h3 class="mb-3 font-bold border-b border-gray-300 inline-block">Hardware</h3>
+      <p class="text-gray-600 leading-relaxed">FEA, Sensors, Mechatronics, Rapid Prototyping</p>
     </div>
     <div>
-      <h3 class="mb-2 font-semibold underline">Software / CAD</h3>
-      <p>SolidWorks, Creo, NX, MATLAB, Python</p>
+      <h3 class="mb-3 font-bold border-b border-gray-300 inline-block">Software / CAD</h3>
+      <p class="text-gray-600 leading-relaxed">SolidWorks, Creo, NX, MATLAB, Python, ROS</p>
     </div>
     <div>
-      <h3 class="mb-2 font-semibold underline">Manufacturing</h3>
-      <p>CNC, 3D Printing, DFM</p>
+      <h3 class="mb-3 font-bold border-b border-gray-300 inline-block">Manufacturing</h3>
+      <p class="text-gray-600 leading-relaxed">CNC Machining, 3D Printing (SLA/FDM), DFM, Injection Molding</p>
     </div>
   </div>
 </section>
 
-<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center z-50">
-    </div>
+<div id="projectModal" class="fixed inset-0 bg-black/80 hidden z-[100] p-6 overflow-y-auto items-center justify-center" onclick="closeModal()">
+  <div class="bg-white max-w-4xl w-full p-8 md:p-12 relative" onclick="event.stopPropagation()">
+    <button class="absolute top-4 right-6 text-3xl font-light hover:text-gray-500" onclick="closeModal()">&times;</button>
+    <div id="modalContent">
+      </div>
+  </div>
+</div>
 
 <script>
-    // Include the original filter-btn and openProject logic here
+  // Project Data Store
+  const projects = {
+    1: {
+      title: "VIMA Navigation",
+      category: "Human-Centered",
+      media: '<div class="aspect-video bg-gray-100 flex items-center justify-center border mb-6">VIDEO PLACEHOLDER (YouTube/MP4)</div>',
+      desc: "Detailed description of the assistive device designed for visual impairment navigation. Focused on haptic feedback and real-time obstacle detection."
+    },
+    2: {
+      title: "Exoskeleton Grip",
+      category: "Human-Centered",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "An assistive robotic glove designed to help patients with limited hand mobility regain grip strength."
+    },
+    // ... add more project data entries here
+  };
+
+  // Filter Logic
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active-filter'));
+      btn.classList.add('active-filter');
+      
+      const filter = btn.getAttribute('data-filter');
+      
+      cards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Modal Logic
+  function openProject(id) {
+    const modal = document.getElementById('projectModal');
+    const content = document.getElementById('modalContent');
+    const data = projects[id] || { title: "Project Title", category: "Category", media: '<div class="h-64 bg-gray-100 mb-6"></div>', desc: "Project details coming soon." };
+    
+    content.innerHTML = `
+      <h2 class="text-3xl font-bold mb-1">${data.title}</h2>
+      <p class="text-gray-500 italic mb-6">${data.category}</p>
+      ${data.media}
+      <div class="text-lg leading-relaxed text-gray-700">
+        ${data.desc}
+      </div>
+    `;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Stop background scroll
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
 </script>
+
 </body>
 </html>
