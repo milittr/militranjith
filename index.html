@@ -3,229 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Milit Ranjith | Portfolio</title>
-
-  <!-- Tailwind CDN -->
+  <title>About | Milit Ranjith</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
   <style>
-    body {
-      font-family: 'Libre Baskerville', serif;
-      background-color: #f8f8f8;
-    }
-
-    .diagram-line {
-      border-top: 1px dashed #bbb;
-    }
-
-    .active-filter {
-      background-color: #e5e7eb;
-    }
+    body { font-family: 'Libre Baskerville', serif; background-color: #f8f8f8; }
+    .diagram-line { border-top: 1px dashed #bbb; }
   </style>
 </head>
-
 <body class="text-gray-800">
 
-<!-- NAVBAR -->
 <header class="fixed top-0 w-full bg-white shadow-sm z-50">
   <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
     <h1 class="text-lg font-semibold">Milit Ranjith</h1>
     <div class="space-x-6 text-sm">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#skills" class="hover:underline">Skills</a>
-      <a href="#projects" class="hover:underline">Work</a>
-      <a href="#contact" class="hover:underline">Contact</a>
+      <a href="index.html" class="font-bold border-b-2 border-black">About</a>
+      <a href="work.html" class="hover:underline">Work</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
     </div>
   </nav>
 </header>
 
 <div class="h-16"></div>
 
-<!-- ABOUT -->
-<section id="about" class="max-w-4xl mx-auto p-6">
+<section class="max-w-4xl mx-auto p-6 mt-10">
   <h2 class="text-2xl mb-4">About</h2>
-  <div class="diagram-line mb-6"></div>
-  <p class="text-sm leading-relaxed">
-    I'm a Mechanical Engineering graduate student at UC Berkeley focused on product design, 
-    with experience spanning assistive technology, robotics, and consumer hardware. 
-    I enjoy building simple, thoughtful systems that solve real problems — especially 
-    when they sit at the intersection of engineering and human experience.
-  </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="max-w-4xl mx-auto p-6">
-  <h2 class="text-2xl mb-4">Skills</h2>
-  <div class="diagram-line mb-6"></div>
-
-  <div class="space-y-4 text-sm">
+  <div class="diagram-line mb-8"></div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="aspect-square bg-gray-200 flex items-center justify-center border border-gray-300">
+      <span class="text-gray-400">Profile Image Placeholder</span>
+    </div>
     
-    <div>
-      <h3 class="mb-2 font-semibold">Hardware</h3>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-gray-200 rounded-full">FEA</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">Sensors</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">Mechatronics</span>
-      </div>
+    <div class="text-sm leading-relaxed space-y-4">
+      <p>
+        I'm a Mechanical Engineering graduate student at UC Berkeley focused on product design, 
+        with experience spanning assistive technology, robotics, and consumer hardware.
+      </p>
+      <p>
+        I enjoy building simple, thoughtful systems that solve real problems — especially 
+        when they sit at the intersection of engineering and human experience.
+      </p>
     </div>
-
-    <div>
-      <h3 class="mb-2 font-semibold">Software / CAD</h3>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-gray-200 rounded-full">SolidWorks</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">Creo</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">NX</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">MATLAB</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">Python</span>
-      </div>
-    </div>
-
-    <div>
-      <h3 class="mb-2 font-semibold">Manufacturing</h3>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-gray-200 rounded-full">CNC</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">3D Printing</span>
-        <span class="px-3 py-1 bg-gray-200 rounded-full">DFM</span>
-      </div>
-    </div>
-
   </div>
 </section>
-
-<!-- PROJECTS -->
-<section id="projects" class="max-w-6xl mx-auto p-6">
-  <h2 class="text-2xl mb-4">Work</h2>
-  <div class="diagram-line mb-6"></div>
-
-  <!-- FILTERS -->
-  <div class="mb-6 flex flex-wrap gap-2 text-sm">
-    <button class="filter-btn active-filter px-3 py-1 border" data-filter="all">All</button>
-    <button class="filter-btn px-3 py-1 border" data-filter="human">Human-Centered</button>
-    <button class="filter-btn px-3 py-1 border" data-filter="robotics">Robotics</button>
-    <button class="filter-btn px-3 py-1 border" data-filter="mechanical">Mechanical</button>
-  </div>
-
-  <!-- GRID -->
-  <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-    <!-- CARD -->
-    <div class="project-card border p-4 cursor-pointer" data-category="human" onclick="openProject('vima')">
-      <div class="h-40 bg-gray-200 mb-4 flex items-center justify-center text-xs">Image</div>
-      <h3 class="text-sm">VIMA – Assistive Navigation Device</h3>
-    </div>
-
-    <div class="project-card border p-4 cursor-pointer" data-category="mechanical" onclick="openProject('solar')">
-      <div class="h-40 bg-gray-200 mb-4 flex items-center justify-center text-xs">Image</div>
-      <h3 class="text-sm">Solar Car Chassis</h3>
-    </div>
-
-    <div class="project-card border p-4 cursor-pointer" data-category="human" onclick="openProject('ankle')">
-      <div class="h-40 bg-gray-200 mb-4 flex items-center justify-center text-xs">Image</div>
-      <h3 class="text-sm">Ankle Rehabilitation Device</h3>
-    </div>
-
-    <div class="project-card border p-4 cursor-pointer" data-category="mechanical" onclick="openProject('pill')">
-      <div class="h-40 bg-gray-200 mb-4 flex items-center justify-center text-xs">Image</div>
-      <h3 class="text-sm">Pill Coating Device</h3>
-    </div>
-
-    <div class="project-card border p-4 cursor-pointer" data-category="robotics" onclick="openProject('robotics')">
-      <div class="h-40 bg-gray-200 mb-4 flex items-center justify-center text-xs">Image</div>
-      <h3 class="text-sm">Soft Robotics Modeling</h3>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECT DETAIL MODAL -->
-<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center">
-  <div class="bg-white p-6 max-w-2xl w-full relative">
-    <button onclick="closeProject()" class="absolute top-2 right-2 text-sm">✕</button>
-    <h3 id="modalTitle" class="text-xl mb-4"></h3>
-    <div class="h-48 bg-gray-200 mb-4 flex items-center justify-center text-xs">Image / Video</div>
-    <p id="modalContent" class="text-sm"></p>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<footer id="contact" class="max-w-4xl mx-auto p-6 mt-10">
-  <div class="diagram-line mb-6"></div>
-  <h2 class="text-xl mb-4">Contact</h2>
-
-  <div class="flex gap-6 text-sm">
-    <a href="mailto:militranjith2004@gmail.com" class="flex items-center gap-2">
-      <i data-lucide="mail"></i>Email
-    </a>
-    <a href="https://linkedin.com" target="_blank" class="flex items-center gap-2">
-      <i data-lucide="linkedin"></i>LinkedIn
-    </a>
-  </div>
-</footer>
-
-<script>
-lucide.createIcons();
-
-// FILTER LOGIC
-const buttons = document.querySelectorAll(".filter-btn");
-const cards = document.querySelectorAll(".project-card");
-
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelector(".active-filter").classList.remove("active-filter");
-    btn.classList.add("active-filter");
-
-    const filter = btn.dataset.filter;
-
-    cards.forEach(card => {
-      if (filter === "all" || card.dataset.category === filter) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  });
-});
-
-// MODAL CONTENT
-const projectData = {
-  vima: {
-    title: "VIMA – Assistive Navigation Device",
-    content: "A handheld device designed to help visually impaired users navigate using haptic feedback and ultrasonic sensing."
-  },
-  solar: {
-    title: "Solar Car Chassis",
-    content: "Designed a spaceframe chassis using NX, including FEA validation and tolerance analysis."
-  },
-  ankle: {
-    title: "Ankle Rehabilitation Device",
-    content: "A 2-DOF rehabilitation platform designed for post-op recovery with user-centered design."
-  },
-  pill: {
-    title: "Pill Coating Device",
-    content: "A syringe-based coating system designed using DFM principles and validated via DOE."
-  },
-  robotics: {
-    title: "Soft Robotics Modeling",
-    content: "Developed a Cosserat rod-based simulation framework with high accuracy vs FEA."
-  }
-};
-
-function openProject(key) {
-  document.getElementById("modalTitle").innerText = projectData[key].title;
-  document.getElementById("modalContent").innerText = projectData[key].content;
-  document.getElementById("projectModal").classList.remove("hidden");
-}
-
-function closeProject() {
-  document.getElementById("projectModal").classList.add("hidden");
-}
-</script>
 
 </body>
 </html>
