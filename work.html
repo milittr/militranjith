@@ -72,13 +72,14 @@
 
   <div class="mb-10 flex flex-wrap gap-3">
     <button class="filter-btn active-filter px-4 py-1 border rounded-full text-sm" data-filter="all">All Projects</button>
-    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="human">Human-Centered</button>
-    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="robotics">Robotics</button>
-    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="mechanical">Mechanical</button>
+    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="Human-Centered">Human-Centered</button>
+    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="Robotics & Simulation">Robotics & Simulation</button>
+    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="Mechanical">Mechanical</button>
+    <button class="filter-btn px-4 py-1 border rounded-full text-sm" data-filter="Data & ML">Data & ML</button>
   </div>
 
   <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(1)">
+    <div class="project-card group cursor-pointer" data-category="Human-Centered" onclick="openProject(1)">
       <div class="aspect-video bg-gray-200 mb-3 overflow-hidden border border-gray-300">
         <img src="p1-thumb.jpg" alt="VIMA" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
       </div>
@@ -86,37 +87,37 @@
       <p class="text-gray-600 italic">Human-Centered</p>
     </div>
 
-    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(2)">
+    <div class="project-card group cursor-pointer" data-category="Human-Centered" onclick="openProject(2)">
       <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
-      <h3 class="text-xl font-bold">Exoskeleton Grip</h3>
+      <h3 class="text-xl font-bold">Ankle Rehabilitation Device</h3>
       <p class="text-gray-600 italic">Human-Centered</p>
     </div>
 
-    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(5)">
+    <div class="project-card group cursor-pointer" data-category="Human-Centered" onclick="openProject(5)">
       <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
-      <h3 class="text-xl font-bold">Swarm Drone Array</h3>
-      <p class="text-gray-600 italic">Robotics</p>
+      <h3 class="text-xl font-bold">Automated Pill Coating Device</h3>
+      <p class="text-gray-600 italic">Human-Centered</p>
     </div>
 
-    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(6)">
+    <div class="project-card group cursor-pointer" data-category="Robotics & Simulation" onclick="openProject(6)">
       <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
-      <h3 class="text-xl font-bold">Autonomous Rover</h3>
-      <p class="text-gray-600 italic">Robotics</p>
+      <h3 class="text-xl font-bold">Autonomous Sheep Herding</h3>
+      <p class="text-gray-600 italic">Robotics & Simulation</p>
     </div>
 
-    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(9)">
+    <div class="project-card group cursor-pointer" data-category="Robotics & Simulation" onclick="openProject(9)">
       <div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div>
-      <h3 class="text-xl font-bold">Aerospace Linkage</h3>
-      <p class="text-gray-600 italic">Mechanical</p>
+      <h3 class="text-xl font-bold">Multi-Terrain Robot Locomotion</h3>
+      <p class="text-gray-600 italic">Robotics & Simulation</p>
     </div>
 
-    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(3)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Prosthetic Interface</h3><p class="text-gray-600 italic">Human-Centered</p></div>
-    <div class="project-card group cursor-pointer" data-category="human" onclick="openProject(4)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Haptic Feedback Glove</h3><p class="text-gray-600 italic">Human-Centered</p></div>
-    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(7)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Soft Robotics Gripper</h3><p class="text-gray-600 italic">Robotics</p></div>
-    <div class="project-card group cursor-pointer" data-category="robotics" onclick="openProject(8)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Bipedal Balancer</h3><p class="text-gray-600 italic">Robotics</p></div>
-    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(10)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Turbine Housing</h3><p class="text-gray-600 italic">Mechanical</p></div>
-    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(11)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Suspension Geometry</h3><p class="text-gray-600 italic">Mechanical</p></div>
-    <div class="project-card group cursor-pointer" data-category="mechanical" onclick="openProject(12)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Cryogenic Valve</h3><p class="text-gray-600 italic">Mechanical</p></div>
+    <div class="project-card group cursor-pointer" data-category="Robotics & Simulation" onclick="openProject(3)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Soft Robotics Simulation Framework</h3><p class="text-gray-600 italic">Robotics & Simulation</p></div>
+    <div class="project-card group cursor-pointer" data-category="Robotics & Simulation" onclick="openProject(4)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Rolls-Royce Systems Verification</h3><p class="text-gray-600 italic">Robotics & Simulation</p></div>
+    <div class="project-card group cursor-pointer" data-category="Mechanical" onclick="openProject(7)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">All-Terrain Firehose Unkinker</h3><p class="text-gray-600 italic">Mechanical</p></div>
+    <div class="project-card group cursor-pointer" data-category="Mechanical" onclick="openProject(8)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Solar Car Spaceframe Chassis</h3><p class="text-gray-600 italic">Mechanical</p></div>
+    <div class="project-card group cursor-pointer" data-category="Mechanical" onclick="openProject(10)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">2-Axis Tabletop CNC Lathe</h3><p class="text-gray-600 italic">Mechanical</p></div>
+    <div class="project-card group cursor-pointer" data-category="Mechanical" onclick="openProject(11)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Benthic Mud Microbial Fuel Cell</h3><p class="text-gray-600 italic">Mechanical</p></div>
+    <div class="project-card group cursor-pointer" data-category="Data & ML" onclick="openProject(12)"><div class="aspect-video bg-gray-200 mb-3 border border-gray-300"></div><h3 class="text-xl font-bold">Wildfire Risk Classification</h3><p class="text-gray-600 italic">Data & ML</p></div>
   </div>
 </section>
 
@@ -126,15 +127,15 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-lg">
     <div>
       <h3 class="mb-3 font-bold border-b border-gray-300 inline-block">Hardware</h3>
-      <p class="text-gray-600 leading-relaxed">FEA, Sensors, Mechatronics, Rapid Prototyping</p>
+      <p class="text-gray-600 leading-relaxed">Sensors, Actuators, Microcontrollers</p>
     </div>
     <div>
       <h3 class="mb-3 font-bold border-b border-gray-300 inline-block">Software / CAD</h3>
-      <p class="text-gray-600 leading-relaxed">SolidWorks, Creo, NX, MATLAB, Python, ROS</p>
+      <p class="text-gray-600 leading-relaxed">SolidWorks, Creo, NX, MATLAB, Python, Abaqus</p>
     </div>
     <div>
       <h3 class="mb-3 font-bold border-b border-gray-300 inline-block">Manufacturing</h3>
-      <p class="text-gray-600 leading-relaxed">CNC Machining, 3D Printing (SLA/FDM), DFM, Injection Molding</p>
+      <p class="text-gray-600 leading-relaxed">CNC Machining, 3D Printing (SLA/FDM), DFM/DFA, Injection Molding</p>
     </div>
   </div>
 </section>
@@ -154,14 +155,85 @@
       title: "VIMA Navigation",
       category: "Human-Centered",
       media: '<div class="aspect-video bg-gray-100 flex items-center justify-center border mb-6">VIDEO PLACEHOLDER (YouTube/MP4)</div>',
-      desc: "Detailed description of the assistive device designed for visual impairment navigation. Focused on haptic feedback and real-time obstacle detection."
+      desc: "VIMA is a handheld assistive navigation device designed to give visually impaired users greater autonomy in urban environments. Unlike traditional white canes, VIMA uses an array of vibration motors to translate real-time proximity data into haptic feedback, letting users sense their surroundings through touch rather than sight. The device went through 10+ design iterations, with a visually impaired user involved throughout to ensure the feedback stayed intuitive rather than overwhelming. FEA on traditional cane handles informed where and how the haptic motors were distributed across the grip, replicating natural force patterns a cane user would already recognize. On the hardware side, an elastomeric camera mount using rubber isolation grommets was designed to decouple vibration from the haptic motors and the ESP32-S3 camera module, preventing optical misalignment during tactile alerts. The SolidWorks enclosure was adapted for injection molding by applying DFA principles, integrating snap-fit PCB standoffs, sensor mounts, and internal cable routing while keeping the external form ergonomic and pocketable. VIMA secured $8,000 in non-dilutive funding and was exhibited at SISTER, Manchester's Innovation District. It is currently being developed toward commercialization as a non-profit project."
     },
     2: {
-      title: "Exoskeleton Grip",
+      title: "Ankle Rehabilitation Device",
       category: "Human-Centered",
       media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
-      desc: "An assistive robotic glove designed to help patients with limited hand mobility regain grip strength."
+      desc: "Poor patient engagement outside clinical settings is one of the most persistent barriers to ankle recovery after surgery. This project translated that problem into a 2-DOF sensorized rehabilitation platform that makes physical therapy feel less like a chore by turning it into a game. The core interaction is a gamified maze interface: the patient navigates a character through the maze using only their ankle, with the platform tracking motion in real time through an onboard IMU. This gave patients immediate, intuitive feedback on their movement without requiring any clinical supervision, addressing the adherence problem directly rather than through instruction alone. User interviews with physical therapists and post-op patients were conducted throughout to make sure the design reflected real clinical needs rather than assumed ones. The mechanical design, done in Creo, uses a tensioned-cable constraint system to guide the ankle through dorsiflexion and plantarflexion (±20°) and inversion and eversion (±10°), ranges derived from those clinical interviews. Detailed tolerancing decisions were made throughout: battery pocket depth carries a +0.5mm unilateral clearance to accommodate cell swelling, and the IMU housing uses press-fit retention for secure, repeatable seating without fasteners. Multiple design cycles simplified the platform from a button-heavy adjustable system down to a clean, low-complexity form that met cost and safety constraints while remaining usable at home."
     },
+
+    3: {
+      title: "Automated Pill Coating Device",
+      category: "Human-Centered",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Dogs are notoriously good at eating around pills, so pet owners often coat medication in peanut butter or soft food to get them to take it. Doing this by hand is messy and inconsistent, and cleaning between doses is tedious. This project developed a syringe-drive mechanism to automate that coating process, making it repeatable and hygienic for everyday home use. DFM principles shaped the architecture from the start. Rather than specifying custom actuators, the design uses off-the-shelf syringe assemblies and actuators, eliminating custom fabrication and keeping the bill of materials practical. A snap-fit container allows the device to be fully disassembled for cleaning without tools, which matters when switching between coating materials or between pets. Motor selection was driven by a factorial design of experiments conducted in JMP, varying fluid viscosity and feed rate across realistic coating materials to estimate force requirements."
+    },
+
+    4: {
+      title: "Autonomous Sheep Herding",
+      category: "Robotics & Simulation",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Herding problems show up across agricultural robotics, wildlife management, and multi-agent coordination, but they are deceptively hard to solve: the agent being herded is not passive, it reacts, panics, and tires. This project developed an autonomous control strategy to reliably herd a simulated sheep agent into a target pen, with the sheep behavior modeled to reflect real animal dynamics rather than a simple evasion rule. The approach uses a gain-scheduled Linear Model Predictive Control framework built in Pyomo, controlling a single herding agent across an 8-state coupled dynamical system. The key modeling decision was making the sheep's panic response distance-dependent: as the herding agent closes in, the gain schedule shifts to reflect the sheep accelerating and becoming harder to predict, which mirrors real animal behavior far more faithfully than a fixed response model would. Fatigue effects were also incorporated so the sheep's evasion degrades over time, adding another layer of biological realism. Closed-loop MPC performance was validated against an open-loop baseline through trajectory efficiency across four diverse starting configurations, achieving 100% task success across all of them. The project received an A+."
+    },
+
+     5: {
+      title: "Multi-Terrain Robot Locomotion",
+      category: "Robotics & Simulation",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Most legged robot controllers are tuned for a specific terrain type, which works well in controlled environments but falls apart the moment conditions change. This project investigated whether a single reinforcement learning policy could handle stable bipedal locomotion across both smooth and rough terrain without any terrain-specific tuning. The policy was trained using Proximal Policy Optimization in MuJoCo Playground, with a reward structure designed to balance three competing objectives: velocity tracking, Zero Moment Point stability, and energy efficiency. Getting that balance right was the core design challenge since over-weighting stability produces a robot that barely moves, while over-weighting velocity produces one that falls. To make the policy robust to the kinds of uncertainty present in real hardware, domain randomization was applied during training, injecting sensor noise, center-of-mass offsets, and joint calibration errors into the simulation. This forced the policy to learn behaviors that generalized rather than ones that exploited specific simulation conditions. The result was stable, consistent gait behavior across both terrain types from a single policy, with comparable stride frequency and stride length performance between smooth and rough surfaces."
+    },
+
+    6: {
+      title: "Soft Robotics Simulation Framework",
+      category: "Robotics & Simulation",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Designing soft robotic fingers is slow work. Without accurate general-purpose modeling tools, every new actuator type or material choice requires a fresh round of physical prototyping and FEA, making iteration expensive and time-consuming. This undergraduate research project addressed that gap by building a unified simulation and control framework for soft robotic fingers that works across multiple actuation strategies and material models. The framework is built on Cosserat rod theory, which captures the geometric nonlinearities that become significant when a soft structure undergoes large deformation, something standard beam models handle poorly. It was implemented in MATLAB and validated against both Abaqus FEA outputs and analytical solutions, achieving less than 0.3% NRMSE in low-deformation regimes. The framework supports both tendon-driven and pneumatic actuation, making it adaptable to the two most common soft finger designs without needing to be rebuilt from scratch for each. Closed-loop control was implemented as a tip-position state-space PID inverse kinematics loop in Simulink, achieving stable end-effector tracking. The full framework was documented as an undergraduate dissertation."
+    },
+
+    7: {
+      title: "Rolls-Royce Systems Verification",
+      category: "Robotics & Simulation",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "The Pearl 10X is the engine powering Dassault's Falcon business jet, and its Electronic Engine Control system sits at the center of how the engine behaves under every flight condition. As a systems verification intern at Rolls-Royce in Derby, the work involved making sure that control system actually did what it was supposed to do, reliably and safely, before it reached the aircraft. The core of the work was developing System Acceptance Test scripts in Python that simulated flight conditions on a digital twin of the EEC, then ran those same tests in batch on the real hardware. The Robot Framework was used to automate data analysis and verify EEC behavior against safety-critical requirements derived from DO-178C guidelines, reducing manual testing effort by around 20%. The scripts were written to be reusable and adaptable, aligning with Rolls-Royce's broader model-based production initiative rather than being one-off solutions. Beyond test development, the role involved contributing to FMEA across three EEC subsystems to identify high-risk failure modes, and performing root cause analysis on software failures using fault tree diagrams. One of those analyses traced a logic discrepancy through system block diagrams and isolated a critical error in the engine oil subfunctionality. The internship ended with a return offer."
+    },
+
+    8: {
+      title: "All-Terrain Firehose Unkinker",
+      category: "Mechanical",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "A kinked firehose can cut water pressure at exactly the wrong moment. During wildfires in particular, where response time and sustained flow are critical, a kink mid-operation can be genuinely dangerous. This final-year group design project developed a conceptual device to simultaneously advance and unkink a firehose while it is in active use, without requiring a firefighter to stop and manually address it. The system consists of two coordinated units: an advancing chassis that propels the hose forward across rough terrain, and a self-propelling unkinking shuttle that travels along the hose independently to locate and remove kinks as they form. The shuttle was designed around a gym rack mechanism that accommodates firehoses of varying diameters without adjustment, and uses concave rollers rather than flat ones to cradle the hose and minimize the risk of damage during unkinking. Manual handles were also integrated so the shuttle can be operated by hand when the terrain or situation makes autonomous operation impractical. The design was developed from functional requirements using a selection matrix to evaluate competing concepts, followed by sustainable material selection to minimize environmental impact in line with the UN's SDGs. A holistic cost analysis confirmed the design was achievable using off-the-shelf components, keeping the device affordable and manufacturable without custom parts. The self-propelling shuttle runs on a rechargeable lithium-ion battery with a 3-hour operational life."
+    },
+
+    9: {
+      title: "Solar Car Spaceframe Chassis",
+      category: "Mechanical",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Manchester's first solar vehicle needed a chassis that could survive real structural loads while staying as light as possible. As Vice President and Chassis Design Lead for Solar Car Manchester, this meant leading an 8-member team through the full design process from material selection through to a validated structure in Siemens NX. The chassis is a spaceframe design in 6061-T6 aluminum, chosen after material trade studies weighed strength-to-weight ratio, weldability, and cost against competing options. Structural FEA was used to validate integrity under peak load cases before any physical fabrication, catching potential failure modes at the design stage rather than after the fact. One of the more demanding aspects of the work was the suspension mount design. The mounts are CNC-machined with full GD&T callouts, and an RSS tolerance stack-up analysis was performed to ensure hardpoint alignment stayed within ±0.5mm after welding. Weld-induced distortion was explicitly accounted for in that analysis, since even small deviations in suspension hardpoint geometry can meaningfully affect handling."
+    },
+
+    10: {
+      title: "2-Axis Tabletop CNC Lathe",
+      category: "Mechanical",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Industrial lathes are overkill for small-scale prototyping work, and access to one is not always guaranteed in a design lab. This group project developed the detailed design of a compact, fully manufacturable 2-axis CNC lathe sized specifically for small component production, with a footprint no larger than 625 x 250mm. The machine was designed to cut aluminum parts up to 40mm in diameter and 40mm in protruding length, at a maximum turning speed of 75 m/min and a feed rate of 0.05 mm/rev. These specs were tight enough to require careful attention to stiffness and alignment throughout the design. The specific contribution to the project was the X-axis table assembly, including the linear rail system, lead screw mechanism, and tool holder. Detailed engineering drawings were produced with full GD&T callouts, covering both the individual components and their assembled tolerances. Getting the tolerancing right on a machine tool is particularly unforgiving since cumulative error in the motion system translates directly into part inaccuracy, so the drawings went through several rounds of review before being finalized."
+    },
+
+    11: {
+      title: "Benthic Mud Microbial Fuel Cell",
+      category: "Mechanical",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Rural and remote communities in regions like Botswana often lack access to reliable electricity, and conventional infrastructure is either too expensive or too far away to be practical. This project explored whether benthic mud, the organic-rich sediment found at the bottom of ponds and waterways, could serve as a viable substrate for a microbial fuel cell capable of powering small appliances. A dual-chamber MFC was designed and assembled from scratch, with benthic mud as the primary substrate in the anodic chamber and a topsoil control sample used for comparison. Airflow to the cathodic chamber was varied systematically to understand how dynamic environmental conditions affected output, and different electrode materials were tested to find configurations that improved both electrical conductivity and microbial adhesion to the electrode surface. Voltage and current output were monitored throughout, with power density calculated to evaluate overall efficiency. The device generated a typical current density of 0.5 to 1.0 mA/cm², and the results demonstrated that stacking multiple MFC units could realistically power low-energy appliances such as LED lights, pointing toward a genuinely accessible off-grid energy source for resource-limited settings."
+    },
+
+    12: {
+      title: "Wildfire Risk Classification",
+      category: "Data & ML",
+      media: '<img src="p2-large.jpg" class="w-full border mb-6" alt="Exo">',
+      desc: "Nearly half of the world's most catastrophic wildfire disasters have occurred in the last decade, and in California alone the economic losses have scaled into the tens of billions. The core challenge for fire agencies isn't just responding to fires, it's knowing in advance which days and locations are genuinely high risk so that crews and resources can be positioned before ignition occurs. This project built a supervised binary classification pipeline to do exactly that, predicting daily wildfire risk at California weather stations from environmental conditions alone. The dataset comes from the California Irrigation Management Information System (CIMIS), containing 128,125 daily observations across 14 environmental features, merged with real wildfire occurrence records to produce a binary target: fire risk or no fire risk. A critical design choice throughout was treating recall as the primary evaluation metric rather than accuracy. A false negative, a high-risk day the model fails to flag, carries far greater real-world consequence than a false positive. Missing a fire alarm means delayed evacuations, underprepared crews, and uncontrolled spread. That asymmetry was formalized into a custom cost function penalizing false negatives at 10x the weight of false positives, keeping the optimization aligned with what actually matters in deployment. Four model families were benchmarked under a consistent protocol of 5-fold stratified cross-validation: Logistic Regression as an interpretable linear baseline, a Decision Tree as a simple nonlinear comparator, a Random Forest as the primary ensemble method, and a Multilayer Perceptron as the most expressive architecture. Random Forest emerged as the strongest overall model, achieving a ROC-AUC of 0.904 and a test recall of 0.921 at a tuned classification threshold of 0.27. All four models outperformed the naive dummy baseline, confirming that station-level meteorological data carries genuine predictive signal for wildfire risk. The pipeline is designed to serve as an automated screening layer for fire agencies, flagging high-risk station-days for human review and enabling preemptive resource deployment before a fire starts."
+    },
+
     // ... add more project data entries here
   };
 
